@@ -1,0 +1,10 @@
+[Unit]
+Description=CJMCU-8128 sensor service
+
+[Service]
+Type=simple
+ExecStart=/app/services/rpi-sensor/.venv/bin/python /app/services/rpi-sensor/sensor_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
